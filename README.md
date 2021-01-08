@@ -32,6 +32,8 @@ Note: I have used multi-layered approach in docker and spring.
 ### OpenAPI 3.0 Documentation URL: 
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
+Note: Also ```postman collection``` has been pushed into repository for your reference.
+
 ### In-Memory Database Dashboard:
 http://localhost:8081/h2-console/login.jsp   
 
