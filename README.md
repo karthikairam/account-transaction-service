@@ -15,7 +15,7 @@ This is a demo microservice for account transaction as part of mobile challenger
 9. JaCoCo for code coverage
 
 ### JaCoCo code coverage is: ``` 100 % ```
-![alt text](https://raw.githubusercontent.com/karthikaiselvan/account-transaction-service/main/JaCoCo_Report.jpg?token=ACQKII5EMQMLZPFK3ICDWLC77DWJW)
+![alt text](https://github.com/karthikaiselvan/account-transaction-service/blob/main/JaCoCo_Report.jpg?raw=true)
 
 ### Steps to building Docker Image:
 ##### Step 1: Enter the project directory, 
