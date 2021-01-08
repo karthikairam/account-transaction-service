@@ -1,10 +1,10 @@
 # Microservice: account-transaction-service
 This is a demo microservice for account transaction as part of mobile challengers banking - coding interview
 
-###OpenAPI 3.0 Documentation URL: 
+### OpenAPI 3.0 Documentation URL: 
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
-###In-Memory Database Dashboard:
+### In-Memory Database Dashboard:
 http://localhost:8081/h2-console/login.jsp   
 
 Note: Username and Password for this database can be changed dynamically as I have provided environment variable which will be used inside the application. 
@@ -22,17 +22,17 @@ Note: Username and Password for this database can be changed dynamically as I ha
 
 ### JaCoCo code coverage is: ``` 100 % ```
 
-###Steps to building Docker Image:
-Step 1: Enter the project directory, 
+### Steps to building Docker Image:
+##### Step 1: Enter the project directory, 
     cd <project_directory>
 
-Step 2: To clean and package the micro-service locally
+##### Step 2: To clean and package the micro-service locally
     mvn clean package
  
-Step 3: Build the docker image and store it in local repository (Dockerfile is there in the root of the directory itself)
+##### Step 3: Build the docker image and store it in local repository (Dockerfile is there in the root of the directory itself)
     docker build . --tag account-service
 
-Step 4: Run the micro-service as container in docker:
+##### Step 4: Run the micro-service as container in docker:
     docker run -it -p 8080:8080 account-service:latest
 
 Note: I have used multi-layered approach in docker and spring.
