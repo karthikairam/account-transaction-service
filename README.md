@@ -17,7 +17,7 @@ This is a demo microservice for account transaction as part of mobile challenger
 ### JaCoCo code coverage is: ``` 100 % ```
 ![alt text](https://github.com/karthikaiselvan/account-transaction-service/blob/main/JaCoCo_Report.jpg?raw=true)
 
-### Steps to building Docker Image:
+### Steps to build the Docker Image:
 ##### Step 1: Enter the project directory, 
     cd <project_directory>
 
