@@ -88,10 +88,10 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<excludes>
+						<!-- Below packages doesn't have any business logic and they are just POJOs -->
 						<exclude>com/demo/mobilebank/account/apidoc/**/*</exclude>
 						<exclude>com/demo/mobilebank/account/bean/**/*</exclude>
 						<exclude>com/demo/mobilebank/account/entity/**/*</exclude>
-						<exclude>com/demo/mobilebank/account/exception/**/*</exclude>
 					</excludes>
 				</configuration>
 				<executions>
