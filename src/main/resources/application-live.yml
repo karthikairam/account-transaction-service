@@ -1,0 +1,12 @@
+service:
+  transaction:
+    timeout: ${JPA_TX_TIMEOUT:3} # seconds
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL_ROOT:info}
+
+spring:
+  devtools:
+    livereload:
+      enabled: false

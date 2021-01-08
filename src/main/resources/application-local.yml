@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+service:
+  transaction:
+    timeout: 5 # seconds
+
+logging:
+  level:
+    root: info
+    com:
+      demo:
+        mobilebank: debug
