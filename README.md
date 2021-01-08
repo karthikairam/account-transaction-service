@@ -1,3 +1,5 @@
+![Maven Package](https://github.com/karthikaiselvan/account-transaction-service/workflows/Maven%20Package/badge.svg?branch=main&event=deployment_status)
+
 # Microservice: account-transaction-service
 This is a demo microservice for account transaction as part of mobile challengers banking - coding interview
 
