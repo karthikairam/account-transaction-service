@@ -14,8 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 class MoneyTransactionRequestMapperTest {
 
-    @InjectMocks
-    private MoneyTransactionRequestMapper moneyTransactionRequestMapper;
+    private final MoneyTransactionRequestMapper moneyTransactionRequestMapper = new MoneyTransactionRequestMapper();
 
     @Test
     void test_mapFrom_positive_case() {

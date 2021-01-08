@@ -9,9 +9,9 @@ spring:
     open-in-view: false
   h2:
     console:
-      enabled: true
+      enabled: false
       settings:
-        web-allow-others: true
+        web-allow-others: false
   jackson:
     default-property-inclusion: non_null
 

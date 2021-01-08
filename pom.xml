@@ -29,6 +29,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -88,10 +92,8 @@
 				<version>${jacoco.version}</version>
 				<configuration>
 					<excludes>
-						<!-- Below packages doesn't have any business logic and they are just POJOs -->
-						<exclude>com/demo/mobilebank/account/apidoc/**/*</exclude>
-						<exclude>com/demo/mobilebank/account/bean/**/*</exclude>
-						<exclude>com/demo/mobilebank/account/entity/**/*</exclude>
+						<!-- Below package doesn't have any business logic -->
+						<exclude>com/demo/mobilebank/account/**/*OpenAPIConfiguration.*</exclude>
 					</excludes>
 				</configuration>
 				<executions>

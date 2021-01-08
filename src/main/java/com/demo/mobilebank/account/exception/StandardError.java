@@ -7,6 +7,6 @@ public interface StandardError {
     String getMessage();
 
     default ErrorMessage getErrorMessage() {
-        return new ErrorMessage(getMessage(), getErrorCode());
+        return new ErrorMessage(getErrorCode(), getMessage());
     }
 }
