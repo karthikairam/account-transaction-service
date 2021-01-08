@@ -1,4 +1,4 @@
-![Maven Package](https://github.com/karthikaiselvan/account-transaction-service/workflows/Maven%20Package/badge.svg?branch=main&event=deployment_status)
+![Maven Package](https://github.com/karthikaiselvan/account-transaction-service/workflows/Maven%20Package/badge.svg?branch=main) ![Java CI with Maven](https://github.com/karthikaiselvan/account-transaction-service/workflows/Java%20CI%20with%20Maven/badge.svg?branch=main)
 
 # Microservice: account-transaction-service
 This is a demo microservice for account transaction as part of mobile challengers banking - coding interview
@@ -37,6 +37,6 @@ http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-confi
 Note: Also ```postman collection``` has been pushed into repository for your reference.
 
 ### In-Memory Database Dashboard:
-http://localhost:8081/h2-console/login.jsp   
+http://localhost:8080/h2-console/login.jsp   
 
 Note: Username and Password for this database can be changed dynamically as I have provided environment variable which will be used inside the application. 
