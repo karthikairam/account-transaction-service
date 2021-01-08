@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.demo.mobilebank</groupId>
-	<artifactId>account-service</artifactId>
+	<artifactId>account-transaction-service</artifactId>
 	<version>1.0.0</version>
-	<name>account-service</name>
+	<name>account-transaction-service</name>
 	<description>Microservice to handle account related actions.</description>
 
 	<properties>
