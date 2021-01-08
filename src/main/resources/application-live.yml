@@ -10,3 +10,4 @@ spring:
   devtools:
     livereload:
       enabled: false
+    add-properties: false
