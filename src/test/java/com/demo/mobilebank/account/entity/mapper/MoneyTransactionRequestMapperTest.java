@@ -4,7 +4,6 @@ import com.demo.mobilebank.account.bean.request.MoneyTransactionRequest;
 import com.demo.mobilebank.account.entity.MoneyTransaction;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;

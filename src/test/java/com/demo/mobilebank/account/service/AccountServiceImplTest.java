@@ -11,7 +11,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
@@ -57,17 +58,11 @@ class AccountServiceImplTest {
                 );
 
         //Action
-        final Account account = accountService.retrieve(Long.toString(accountNumber));
+        final Account account = accountService.retrieve(accountNumber);
 
         //Assert
         assertNotNull(account);
         assertEquals(accountNumber, account.getAccountNumber());
-    }
-
-    @Test
-    void test_retrieve_negative_case1() {
-        //Assemble && Action && Assert
-        assertThrows(BadRequestException.class, () -> accountService.retrieve(null));
     }
 
     @Test
@@ -76,7 +71,7 @@ class AccountServiceImplTest {
         when(accountRepository.findByAccountNumber(anyLong())).thenReturn(null);
 
         // Action && Assert
-        assertThrows(AccountNotFoundException.class, () -> accountService.retrieve("12343"));
+        assertThrows(AccountNotFoundException.class, () -> accountService.retrieve(12343));
     }
 
     @Test

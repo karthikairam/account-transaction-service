@@ -8,7 +8,7 @@ public class AccountServiceIntegrationTest {
 
     @Test
     void test_main() {
-        AccountServiceApplication.main(new String[] {});
+        AccountServiceApplication.main(new String[] {"--spring.profiles.active=test"});
         assertTrue(true);
     }
 }

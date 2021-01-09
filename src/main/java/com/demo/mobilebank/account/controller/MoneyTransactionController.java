@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Slf4j
@@ -22,7 +24,7 @@ public class MoneyTransactionController {
 
     @PostMapping(consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    public MoneyTransaction transferMoney(@RequestBody final MoneyTransactionRequest moneyTransactionRequest) {
+    public MoneyTransaction transferMoney(@Valid @RequestBody final MoneyTransactionRequest moneyTransactionRequest) {
         log.debug("Money transaction action.");
         return moneyTransactionService.transferMoney(moneyTransactionRequest);
     }

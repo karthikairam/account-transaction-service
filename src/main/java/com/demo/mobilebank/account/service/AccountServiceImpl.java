@@ -33,14 +33,14 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     @Transactional(isolation = READ_COMMITTED)
-    public Account retrieve(final String accountNumber) {
-        return Optional.ofNullable(accountNumber)
-                .map(accNo -> Optional.of(accNo)
-                        .map(Long::parseLong)
-                        .map(accountRepository::findByAccountNumber)
-                        .orElseThrow(() -> new AccountNotFoundException(String.format("Given account number: %s is not found.", accNo)))
-                )
-                .orElseThrow(() -> new BadRequestException("Given account number is not valid."));
+    public Account retrieve(final long accountNumber) {
+        return Optional.of(accountNumber)
+                .map(accountRepository::findByAccountNumber)
+                .orElseThrow(
+                        () -> new AccountNotFoundException(
+                                String.format("Given account number: %s is not found.", accountNumber)
+                        )
+                );
     }
 
     @Override
@@ -54,7 +54,9 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    @Transactional(propagation = REQUIRES_NEW, isolation = SERIALIZABLE, timeoutString = "${service.transaction.timeout:3}")
+    @Transactional(propagation = REQUIRES_NEW,
+            isolation = SERIALIZABLE,
+            timeoutString = "${service.transaction.timeout:3}")
     public void makeFundTransfer(final long fromAccountNumber, final long toAccountNumber, final BigDecimal fund) {
         this.validateTransferFund(fund);
         this.validateAccounts(fromAccountNumber, toAccountNumber);

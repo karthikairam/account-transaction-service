@@ -21,7 +21,7 @@ springdoc:
     disable-swagger-default-url: true
 
 server:
-  port: ${PORT:8080}
+  port: ${PORT:7981}
 
 service:
   transaction:
