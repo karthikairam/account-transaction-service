@@ -218,6 +218,109 @@
 				"description": "This API is to transfer money from one account to another account."
 			},
 			"response": []
+		},
+		{
+			"name": "Create Account - Client Error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"holderFirstName\" : \"Steve\",\n\t\"holderLastName\": \"Jobs\",\n\t\"balance\": 2000.50\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname_with_port}}/v1/accounts",
+					"protocol": "http",
+					"host": [
+						"{{hostname_with_port}}"
+					],
+					"path": [
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account -  Client Error",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/accounts/:accountNumber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"accounts",
+						":accountNumber"
+					],
+					"variable": [
+						{
+							"key": "accountNumber",
+							"value": "1000001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Money Transfer - Client Error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fromAccountNumber\": 10002,\n\t\"toAccountNumber\": 10002,\n\t\"transactionAmount\": 0.5,\n\t\"referenceNotes\": \"To my friends account\"\n}"
+				},
+				"url": {
+					"raw": "http://{{hostname_with_port}}/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"{{hostname_with_port}}"
+					],
+					"path": [
+						"v1",
+						"transactions"
+					]
+				},
+				"description": "This API is to transfer money from one account to another account."
+			},
+			"response": []
 		}
 	]
 }
