@@ -9,7 +9,7 @@ This is a demo microservice for account transaction as part of mobile challenger
 3. Spring REST API (Spring Web)
 4. Lombok 1.18.16
 5. Spring Data JPA & H2 in-memory database (exposed the client dashboard to see the records)
-6. springdoc-openapi-ui - Auto generated API documentation using OpenAPI 3.0 and exposed Swagger UI for the same (Refer the link above)
+6. springdoc-openapi-ui - Auto generated API documentation using OpenAPI 3.0 and exposed Swagger UI for the same (Refer the link at the bottom of this page)
 7. Dockerized (Dockerfile is included and used the latest concept called multi-layered image building for optimized build time)
 8. TDD approach using JUnit 5, Mockito, and Spring Boot Test
 9. JaCoCo for code coverage
@@ -35,7 +35,7 @@ Note: I have used multi-layered approach in docker and spring.
 ### OpenAPI 3.0 Documentation URL: 
 http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config
 
-Note: Also ```postman collection``` has been pushed into repository for your reference.
+Note: Also [Postman Collection](https://github.com/karthikaiselvan/account-transaction-service/blob/main/account-transaction-service.postman_collection.json) has been pushed into the repository for your reference.
 
 ### In-Memory Database Dashboard:
 http://localhost:8080/h2-console/login.jsp   
