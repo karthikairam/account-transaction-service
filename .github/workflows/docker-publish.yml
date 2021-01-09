@@ -54,6 +54,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Check docker version
+        run: docker --version
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
