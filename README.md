@@ -1,4 +1,4 @@
-![Java CI with Maven](https://github.com/karthikaiselvan/account-transaction-service/workflows/Java%20CI%20with%20Maven/badge.svg?branch=main)
+![Java CI with Maven](https://github.com/karthikaiselvan/account-transaction-service/workflows/Java%20CI%20with%20Maven/badge.svg?branch=main) ![Docker](https://github.com/karthikaiselvan/account-transaction-service/workflows/Docker/badge.svg?branch=main)
 
 # Microservice: account-transaction-service
 This is a demo microservice for account transaction as part of mobile challengers banking - coding interview

@@ -14,8 +14,7 @@ on:
   pull_request:
 
 env:
-  # TODO: Change variable to your image's name.
-  IMAGE_NAME: image
+  IMAGE_NAME: account-transaction-service
 
 jobs:
   # Run tests.
@@ -34,13 +33,16 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
         
+      - name: Check docker version
+        run: docker --version
+        
       - name: Run tests
         run: |
           if [ -f docker-compose.test.yml ]; then
             docker-compose --file docker-compose.test.yml build
             docker-compose --file docker-compose.test.yml run sut
           else
-            docker build . --file Dockerfile
+            DOCKER_BUILDKIT=1 docker build . --file Dockerfile
           fi
 
   # Push image to GitHub Packages.
@@ -54,9 +56,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+      
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        run: DOCKER_BUILDKIT=1 docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
