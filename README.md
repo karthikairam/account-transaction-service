@@ -40,4 +40,4 @@ Note: Also [Postman Collection](https://github.com/karthikaiselvan/account-trans
 ### In-Memory Database Dashboard:
 http://localhost:8080/h2-console/login.jsp   
 
-Note: Username and Password for this database can be changed dynamically as I have provided environment variable which will be used inside the application. 
+Note: Username and Password for the in-memory H2 database can be set differently by passing environment variables namely ```DB_USER``` and ```DB_PWD``` if required, else H2 db provided default username and password will be used. For more details please refer: [application.yml](https://github.com/karthikaiselvan/account-transaction-service/blob/main/src/main/resources/application.yml#L3)
