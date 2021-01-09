@@ -56,6 +56,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
 
       - name: Build image
         run: DOCKER_BUILDKIT=1 docker build . --file Dockerfile --tag $IMAGE_NAME
