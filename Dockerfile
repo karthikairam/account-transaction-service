@@ -10,4 +10,5 @@ COPY --from=builder app/dependencies/ ./
 COPY --from=builder app/snapshot-dependencies/ ./
 COPY --from=builder app/spring-boot-loader/ ./
 COPY --from=builder app/application/ ./
-ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher", "--spring.profiles.active=live"]
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
+CMD ["--spring.profiles.active=live"]
